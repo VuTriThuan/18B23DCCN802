@@ -1,0 +1,17 @@
+# Ket qua build cua Maven
+target/
+
+# Anh mon an tai len khi chay thu
+src/main/webapp/images/*
+!src/main/webapp/images/.gitkeep
+
+# File cua IDE va he dieu hanh
+nbproject/private/
+nb-configuration.xml
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+.DS_Store
