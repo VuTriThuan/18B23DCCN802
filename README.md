@@ -119,11 +119,3 @@ src/main/webapp/view/customer/  CustomerHomePage2.jsp, SearchTablePage2.jsp,
 src/main/webapp/view/salestaff/, view/warehouse/   trang chủ của hai vai trò còn lại
 database/restman2.sql       tạo CSDL + dữ liệu mẫu (Hình 12)
 ```
-
-## 8. Ghi chú để trả lời khi cô hỏi
-
-- **Kiểu mảng:** biểu đồ ghi kiểu mảng (`Table2[]`) thì code dùng `ArrayList<Table2>`, giống code mẫu của giáo trình (`getKihocdangki(): Kihoc[]` → `ArrayList<Kihoc>`).
-- **Gói jakarta:** Tomcat 10 trở lên dùng gói `jakarta.servlet` thay cho `javax.servlet`. Lớp cha vẫn là `HttpServlet` như Hình 15 và Hình 19.
-- **Đăng nhập:** `LoginServlet2` và `UserDAO2` chỉ để đăng nhập, là điều kiện trước của cả hai module (UC Log in 2). Chúng không nằm trong biểu đồ lớp của hai module.
-- **Ngoại lệ 7.2:** `ReservationServlet2` chuyển hướng qua `TableServlet2` để tìm lại bàn trống rồi hiển thị `EmptyTablePage2.jsp`, nên danh sách không còn bàn vừa bị đặt.
-- **Transaction:** `ReservationDAO2.addReservation()` chạy trong một transaction (`setAutoCommit(false)`, `commit`, `rollback`), giống hàm `luuDKcuaSV()` trong giáo trình. Hàm khoá các bàn đã chọn bằng `SELECT … FOR UPDATE` trước khi kiểm tra, để hai khách không đặt trùng một bàn.
